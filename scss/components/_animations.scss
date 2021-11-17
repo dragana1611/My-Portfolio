@@ -1,0 +1,35 @@
+//PULSE BORDER
+@keyframes pulse-border {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+// TYPING ANIMATION
+@keyframes t {
+  90%,
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes c {
+  0%,
+  100% {
+    box-shadow: 5px 0 0 #000;
+  }
+  50% {
+    box-shadow: 5px 0 0 #fff;
+  }
+}
+
+@keyframes m {
+  100% {
+    transform: translateY(-400%);
+  }
+}

@@ -6,6 +6,7 @@
 
   button {
     text-transform: capitalize;
+    border-radius: 0.5rem;
   }
 }
 
@@ -54,4 +55,11 @@
       @include transitionProperty;
     }
   }
+}
+.filterDiv {
+  display: none;
+}
+
+.show {
+  display: block;
 }

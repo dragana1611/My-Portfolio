@@ -11395,7 +11395,7 @@ textarea.form-control-lg {
 }
 
 .btn {
-  margin-top: 6rem;
+  margin-top: 5rem;
 }
 
 .portfolio {
@@ -11403,6 +11403,7 @@ textarea.form-control-lg {
 }
 .portfolio button {
   text-transform: capitalize;
+  border-radius: 0.5rem;
 }
 
 .portfolio-box {
@@ -11450,6 +11451,14 @@ textarea.form-control-lg {
   transition-property: all;
 }
 
+.filterDiv {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 .get-started {
   padding: 4rem 0;
   background-color: #e9ecef;
@@ -11490,6 +11499,16 @@ textarea.form-control-lg {
   color: #fff;
   text-decoration: none;
   text-transform: capitalize;
+}
+
+#status {
+  width: 90%;
+  font-size: 110%;
+  font-weight: 500;
+  text-align: center;
+  padding: 1.5rem;
+  margin: 0 auto;
+  border-radius: 0.5rem;
 }
 
 .footer {

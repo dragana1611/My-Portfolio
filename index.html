@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/fontawesome.css" />
     <link rel="stylesheet" href="assets/vendors/css/glightbox.min.css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
       rel="stylesheet"
@@ -82,17 +83,16 @@
                 </span>
               </span>
             </h1>
-            <button class="rounded-pill btn-rounded" type="button">
-              Get in Touch
-              <a
-                href="https://www.linkedin.com/in/dragana-petrovic-b2059646/"
-                target="_blank"
-              >
+            <a
+              href="https://www.linkedin.com/in/dragana-petrovic-b2059646/"
+              target="_blank"
+            >
+              <button class="rounded-pill btn-rounded" type="button">
+                Get in Touch
                 <span
                   ><i class="fas fa-arrow-right" aria-hidden="true"></i
-                ></span>
-              </a>
-            </button>
+                ></span></button
+            ></a>
           </div>
           <!-- ------------------------------------------------------ -->
           <!-- ****************************************************** -->
@@ -104,7 +104,7 @@
                 class="img-fluid"
               />
               <a
-                href="https://dev-aatelje024.pantheonsite.io/"
+                href="https://github.com/dragana1611"
                 target="_blank"
                 class="
                   glightbox
@@ -425,6 +425,7 @@
           </div>
         </div>
       </div>
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#fff"
@@ -433,6 +434,7 @@
         ></path>
       </svg>
     </section>
+
     <!-- ----------------------------------------------------------------- -->
     <!-- ***************************************************************** -->
     <section id="projects" class="portfolio">
@@ -444,18 +446,40 @@
         </div>
         <!-- FILTER BUTTONS  -->
         <div class="row mt-5 mb-4 g-3 text-center">
-          <div class="col-md-12">
-            <button class="btn btn-outline-primary" type="button">All</button>
-            <button class="btn btn-outline-primary" type="button">
-              websites
+          <div class="col-md-12" id="myBtnContainer">
+            <button
+              class="btn1 btn-outline-primary activee"
+              type="button"
+              onclick="filterSelection('all')"
+            >
+              All
             </button>
-            <button class="btn btn-outline-primary" type="button">
+            <button
+              class="btn1 btn-outline-primary"
+              type="button"
+              onclick="filterSelection('websites')"
+            >
+              Websites
+            </button>
+            <button
+              class="btn1 btn-outline-primary"
+              type="button"
+              onclick="filterSelection('webflow')"
+            >
               Webflow
             </button>
-            <button class="btn btn-outline-primary" type="button">
+            <button
+              class="btn1 btn-outline-primary"
+              type="button"
+              onclick="filterSelection('app')"
+            >
               JS apps
             </button>
-            <button class="btn btn-outline-primary" type="button">
+            <button
+              class="btn1 btn-outline-primary"
+              type="button"
+              onclick="filterSelection('game')"
+            >
               JS games
             </button>
           </div>
@@ -464,7 +488,7 @@
         <!-- START THE PORTFOLIO ITEMS  -->
         <div class="row">
           <div class="col-lg-4 col-md-6">
-            <div class="portfolio-box shadow">
+            <div class="portfolio-box shadow filterDiv websites">
               <img
                 src="images/portfolio/atelje.jpg"
                 alt="Atelje024 image"
@@ -478,14 +502,14 @@
                     target="_blank"
                   >
                     <h4>Atelje 024</h4>
-                    <p>Websites</p>
+                    <p>WP - Websites</p>
                   </a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="portfolio-box shadow">
+            <div class="portfolio-box shadow filterDiv websites">
               <img
                 src="images/portfolio/portfolio1.jpg"
                 alt="Portfolio image"
@@ -494,19 +518,16 @@
               />
               <div class="portfolio-info">
                 <div class="caption">
-                  <a
-                    href="https://dev-saska-popov-rasic.pantheonsite.io/"
-                    target="_blank"
-                  >
+                  <a target="_blank">
                     <h4>Portfolio 1</h4>
-                    <p>Websites</p>
+                    <p>WP - Websites</p>
                   </a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="portfolio-box shadow">
+            <div class="portfolio-box shadow filterDiv websites">
               <img
                 src="images/portfolio/bankist.jpg"
                 alt="JS site image"
@@ -515,7 +536,7 @@
               />
               <div class="portfolio-info">
                 <div class="caption">
-                  <a href="" target="_blank">
+                  <a target="_blank">
                     <h4>Bankist</h4>
                     <p>Websites</p>
                   </a>
@@ -524,7 +545,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="portfolio-box shadow">
+            <div class="portfolio-box shadow filterDiv webflow">
               <img
                 src="images/portfolio/webflow1.jpg"
                 alt="Webflow1 image"
@@ -545,9 +566,9 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="portfolio-box shadow">
+            <div class="portfolio-box shadow filterDiv webflow">
               <img
-                src="images/portfolio/webflow1.jpg"
+                src="images/portfolio/Workshop.jpg"
                 alt="Webflow2 image"
                 title="Webflow2"
                 class="img-fluid"
@@ -555,10 +576,10 @@
               <div class="portfolio-info">
                 <div class="caption">
                   <a
-                    href="https://preview.webflow.com/preview/draganas-first-webflow-site?utm_medium=preview_link&utm_source=designer&utm_content=draganas-first-webflow-site&preview=08faf6ba1563a0efe862eebc767148bf&workflow=preview"
+                    href="https://preview.webflow.com/preview/webflow-workshop-f2c7e2?utm_medium=preview_link&utm_source=designer&utm_content=webflow-workshop-f2c7e2&preview=8db2517bb54d5fd13bd073ee36f1cc7e&workflow=preview"
                     target="_blank"
                   >
-                    <h4>My First Webflow Site</h4>
+                    <h4>Webflow Workshop</h4>
                     <p>Webflow</p>
                   </a>
                 </div>
@@ -566,7 +587,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="portfolio-box shadow">
+            <div class="portfolio-box shadow filterDiv app">
               <img
                 src="images/portfolio/where-am-I.jpg"
                 alt="JS Apps image"
@@ -575,10 +596,7 @@
               />
               <div class="portfolio-info">
                 <div class="caption">
-                  <a
-                    href="https://github.com/dragana1611/API-Fetch-Promise"
-                    target="_blank"
-                  >
+                  <a href="https://dev-where-am-i.netlify.app/" target="_blank">
                     <h4>Where Am I?</h4>
                     <p>JS Apps</p>
                   </a>
@@ -587,7 +605,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="portfolio-box shadow">
+            <div class="portfolio-box shadow filterDiv app">
               <img
                 src="images/portfolio/fun.jpg"
                 alt="JS Apps image"
@@ -597,7 +615,7 @@
               <div class="portfolio-info">
                 <div class="caption">
                   <a
-                    href="https://github.com/dragana1611/Fun-with-Canvas"
+                    href="https://dev-fun-with-canvas.netlify.app/"
                     target="_blank"
                   >
                     <h4>Fun With Canvas</h4>
@@ -608,7 +626,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="portfolio-box shadow">
+            <div class="portfolio-box shadow filterDiv app">
               <img
                 src="images/portfolio/type.jpg"
                 alt="JS Apps image"
@@ -617,10 +635,7 @@
               />
               <div class="portfolio-info">
                 <div class="caption">
-                  <a
-                    href="https://github.com/dragana1611/AJAX-Type-Ahead"
-                    target="_blank"
-                  >
+                  <a href="https://type-ahead-dev.netlify.app/" target="_blank">
                     <h4>Type Ahead</h4>
                     <p>JS Apps</p>
                   </a>
@@ -630,7 +645,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6">
-            <div class="portfolio-box shadow">
+            <div class="portfolio-box shadow filterDiv app">
               <img
                 src="images/portfolio/drums.jpg"
                 alt="JS Apps image"
@@ -640,7 +655,7 @@
               <div class="portfolio-info">
                 <div class="caption">
                   <a
-                    href="https://github.com/dragana1611/Play-sound-with-keypress"
+                    href="https://play-sound-with-keypress.netlify.app/"
                     target="_blank"
                   >
                     <h4>Play sound with keypress</h4>
@@ -651,7 +666,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="portfolio-box shadow">
+            <div class="portfolio-box shadow filterDiv game">
               <img
                 src="images/portfolio/brick.jpg"
                 alt="JS Games image"
@@ -661,7 +676,7 @@
               <div class="portfolio-info">
                 <div class="caption">
                   <a
-                    href="https://github.com/dragana1611/Brick-Breaker"
+                    href="https://dev-brick-breaker.netlify.app/"
                     target="_blank"
                   >
                     <h4>Brick breaker</h4>
@@ -673,7 +688,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6">
-            <div class="portfolio-box shadow">
+            <div class="portfolio-box shadow filterDiv game">
               <img
                 src="images/portfolio/pig.jpg"
                 alt="JS Games image"
@@ -683,7 +698,7 @@
               <div class="portfolio-info">
                 <div class="caption">
                   <a
-                    href="https://github.com/dragana1611/Pig-the-Dice-Game"
+                    href="https://dev-pig-the-dice-game.netlify.app/"
                     target="_blank"
                   >
                     <h4>Pig the dice game</h4>
@@ -694,7 +709,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="portfolio-box shadow">
+            <div class="portfolio-box shadow filterDiv game">
               <img
                 src="images/portfolio/guess.jpg"
                 alt="JS Games image"
@@ -718,6 +733,13 @@
         </div>
       </div>
     </section>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#e9ecef"
+        fill-opacity="1"
+        d="M0,32L80,26.7C160,21,320,11,480,26.7C640,43,800,85,960,106.7C1120,128,1280,128,1360,128L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+      ></path>
+    </svg>
     <!-- ----------------------------------------------------------------- -->
     <!-- ************************************************************** -->
     <section id="contact" class="get-started">
@@ -745,10 +767,10 @@
               <h3 class="display-3--brief"></h3>
               <ul class="cta-info__list">
                 <li>I am able to handle multiple tasks on a daily basis.</li>
-                <li>I use a creative approach to problem solve.</li>
+                <li>I use a creative approach to problem-solving.</li>
                 <li>I am always energetic and eager to learn new skills.</li>
                 <li>I am flexible in my working hours.</li>
-                <li>I am hardworking</li>
+                <li>I am a punctual and hardworking person.</li>
                 <li>I am extremely driven, with a clear goal to succeed.</li>
               </ul>
             </div>
@@ -756,13 +778,19 @@
           <div class="col-12 col-lg-6 bg-white shadow p-3">
             <div class="form w-100 pb-2">
               <h4 class="display-3--title mb-5">Contact me</h4>
-              <form action="#" class="row">
+              <form
+                action="https://formspree.io/f/mbjqnelw"
+                method="POST"
+                class="row"
+                id="my-form"
+              >
                 <div class="col-lg-6 col-md-6 mb-3">
                   <input
                     type="text"
                     placeholder="First Name"
                     id="inputFirstName"
                     class="shadow form-control form-control-lg"
+                    required
                   />
                 </div>
                 <div class="col-lg-6 col-md-6 mb-3">
@@ -771,14 +799,18 @@
                     placeholder="Last Name"
                     id="inputLastName"
                     class="shadow form-control form-control-lg"
+                    required
                   />
                 </div>
                 <div class="col-lg-12 mb-3">
                   <input
                     type="email"
+                    pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$"
+                    name="_replyto"
                     placeholder="email address"
                     id="inputEmail"
                     class="shadow form-control form-control-lg"
+                    required
                   />
                 </div>
                 <div class="col-lg-12 mb-3">
@@ -788,11 +820,12 @@
                     id="message"
                     rows="8"
                     class="shadow form-control form-control-lg"
+                    required
                   ></textarea>
                 </div>
                 <div class="text-center d-grid mt-1">
                   <button
-                    type="button"
+                    type="submit"
                     class="btn btn-primary rounded-pill pt-3 pb-3"
                   >
                     submit
@@ -800,6 +833,7 @@
                   </button>
                 </div>
               </form>
+              <div id="status" class="success"></div>
             </div>
           </div>
         </div>
@@ -983,10 +1017,10 @@
               style="width: 60px; height: 2px; margin-left: 5rem"
             />
             <ul class="list-inline campany-list">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Skills</a></li>
-              <li><a href="#">Projects</a></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
             </ul>
           </div>
         </div>
@@ -1013,6 +1047,7 @@
     <a href="#" class="shadow btn-primary rounded-circle back-to-top">
       <i class="fas fa-chevron-up"></i>
     </a>
+
     <!-- ---------------------------------------------------------------- -->
     <!-- **************************************************************** -->
     <script src="/assets/vendors/js/glightbox.min.js"></script>
@@ -1026,5 +1061,11 @@
       });
     </script>
     <script src="/assets/js/bootstrap.bundle.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
   </body>
 </html>

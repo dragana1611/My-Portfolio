@@ -11118,7 +11118,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.snow-bg {
+/* .snow-bg {
   position: relative;
 }
 
@@ -11134,7 +11134,7 @@ textarea.form-control-lg {
   pointer-events: none;
   background-image: url("https://library.elementor.com/resources/christmas-snow-effect/s1.png"), url("https://library.elementor.com/resources/christmas-snow-effect/s2.png"), url("https://library.elementor.com/resources/christmas-snow-effect/s3.png");
   animation: snow 10s linear infinite;
-}
+} */
 
 @keyframes pulse-border {
   0% {
@@ -11164,7 +11164,7 @@ textarea.form-control-lg {
     transform: translateY(-400%);
   }
 }
-@keyframes snow {
+/* @keyframes snow {
   0% {
     background-position: 0px 0px, 0px 0px, 0px 0px;
   }
@@ -11174,7 +11174,8 @@ textarea.form-control-lg {
   100% {
     background-position: 500px 1000px, 200px 400px, -100px 300px;
   }
-}
+} */
+
 .btn-rounded {
   position: relative;
   padding: 0.9375rem 4.375rem 0.9375rem 1.25rem;

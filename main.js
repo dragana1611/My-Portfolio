@@ -78,6 +78,32 @@ async function handleSubmit(event) {
 }
 form.addEventListener("submit", handleSubmit);
 
+//Back to top button
+let backtotop = document.querySelector(".back-to-top");
+let rootElement = document.documentElement;
+
+function handleScroll() {
+  if (rootElement.scrollTop > 700) {
+    //show button
+    backtotop.classList.add("active");
+  } else {
+    //hide button
+    backtotop.classList.remove("active");
+  }
+}
+document.addEventListener("scroll", handleScroll);
+
+// Smooth scroll to top:
+//button
+backtotop.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});
+
 // Get the modal
 // var modal = document.getElementById("myModal");
 
@@ -103,5 +129,3 @@ form.addEventListener("submit", handleSubmit);
 //     modal.style.display = "none";
 //   }
 // };
-
-

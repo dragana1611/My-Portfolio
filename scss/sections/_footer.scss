@@ -105,6 +105,8 @@ h5 {
 
 .back-to-top {
   position: fixed;
+  display: none;
+  opacity: 0;
   width: 3rem;
   height: 3rem;
   right: 1.875rem;
@@ -117,4 +119,9 @@ h5 {
 
     @include absoluteCenter;
   }
+}
+
+.back-to-top.active {
+  display: block;
+  opacity: 1;
 }

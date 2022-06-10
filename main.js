@@ -104,6 +104,7 @@ backtotop.addEventListener("click", (e) => {
   });
 });
 
+/*
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -128,3 +129,4 @@ window.onclick = function (event) {
    if (event.target == modal) {
   }
  };
+ */

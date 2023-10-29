@@ -79,8 +79,8 @@ async function handleSubmit(event) {
 form.addEventListener("submit", handleSubmit);
 
 //Back to top button
-let backtotop = document.querySelector(".back-to-top");
-let rootElement = document.documentElement;
+const backtotop = document.querySelector(".back-to-top");
+const rootElement = document.documentElement;
 
 function handleScroll() {
   if (rootElement.scrollTop > 700) {
